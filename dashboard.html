@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Noise Energy Dashboard</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="dashboard.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- Sidebar -->
+
+<div class="sidebar">
+
+<h2>⚡ NES</h2>
+
+<a href="#">📊 Dashboard</a>
+
+<a href="#">📈 Analytics</a>
+
+<a href="#">📄 Reports</a>
+
+<a href="#">🗂 History</a>
+
+<a href="#">⚙ Settings</a>
+
+<button id="logoutBtn">
+🚪 Logout
+</button>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="main-content">
+
+<header>
+
+<div class="top-bar">
+
+<h1>Noise Energy Generation System</h1>
+
+<button id="themeBtn">
+🌙 Mode
+</button>
+
+</div>
+
+<p>
+Real Time Noise To Electrical Energy Monitoring
+</p>
+
+<div id="clock"></div>
+
+</header>
+
+<!-- Controls -->
+
+<section class="control-panel">
+
+<button id="simulationBtn">
+🎲 Simulation Mode
+</button>
+
+<button id="micBtn">
+🎤 Microphone Mode
+</button>
+
+<button id="pdfBtn">
+📄 PDF Report
+</button>
+
+<button id="excelBtn">
+📊 Excel Report
+</button>
+
+</section>
+
+<!-- Cards -->
+
+<section class="cards">
+
+<div class="card">
+<h3>Noise Level</h3>
+<p id="noise">0 dB</p>
+</div>
+
+<div class="card">
+<h3>Voltage</h3>
+<p id="voltage">0 V</p>
+</div>
+
+<div class="card">
+<h3>Power</h3>
+<p id="power">0 W</p>
+</div>
+
+<div class="card">
+<h3>Efficiency</h3>
+<p id="efficiency">0 %</p>
+</div>
+
+<div class="card">
+<h3>Battery</h3>
+<p id="batteryCard">0%</p>
+</div>
+
+<div class="card">
+<h3>AI Prediction</h3>
+<p id="prediction">0 W</p>
+</div>
+
+</section>
+
+<!-- Sound Wave -->
+
+<section class="wave-section">
+
+<h2>🎵 Live Sound Wave</h2>
+
+<div class="wave">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
+</section>
+
+<!-- Battery Meter -->
+
+<section class="circle-section">
+
+<h2>⚡ Energy Storage Meter</h2>
+
+<div class="circle">
+
+<div class="inner">
+
+<span id="circleValue">0%</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Status -->
+
+<section class="status-section">
+
+<div class="status-card">
+
+<h2>Noise Status</h2>
+
+<p id="statusText">
+
+LOW
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Graph -->
+
+<section class="graph">
+
+<h2 class="graph-title">
+
+📈 Live Noise Analytics
+
+</h2>
+
+<canvas id="chart"></canvas>
+
+</section>
+
+<!-- History -->
+
+<section class="history-section">
+
+<h2>📋 Energy History</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Time</th>
+<th>Noise</th>
+<th>Power</th>
+<th>Battery</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<footer>
+
+Noise Energy Generation System © 2026
+
+</footer>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+
+</html>
